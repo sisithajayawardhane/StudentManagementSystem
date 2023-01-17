@@ -4,7 +4,7 @@ const bodyParser = require("body-parser");
 const cors = require("cors");
 const dotenv = require("dotenv");
 const app = express();
-dotenv.config()
+dotenv.config();
 
 const PORT = process.env.PORT || 8070;
 
