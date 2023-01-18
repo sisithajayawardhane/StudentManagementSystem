@@ -63,6 +63,16 @@ router.route("/delete/:id").delete(async (req,res) => {
     })
 })
 
+router.route("/get/:id").get(async (req,res) => {
+    let userId = req.params.id;
+    await Student.findById(userId).then(()=>{
+        res.status(200).send({status:"User fetched", user: user});
+    }).catch((err)=>{
+        console.log(err.message);
+        res.status(500).send({status:"Error with get user", error: err.message});
+    })
+})
+
 module.exports = router;
 
 
