@@ -22,8 +22,12 @@ mongoose.set('strictQuery', false);
 const connection = mongoose.connection;
 connection.once("open", () => {
     console.log("MongoDB Connection Success!");
-})
+});
+
+const studentRouter = require("./routes/students.js"); 
+app.use("/student", studentRouter);
+
 
 app.listen(PORT, () => {
     console.log(`Server is up and running on port number: ${PORT}`);
-})
+});
