@@ -25,7 +25,7 @@ export default function ReadStudents(){
     const onDelete = (id)=>{
         axios.delete(`http://localhost:8070/student/delete/${id}`).then(()=>{
             getLatestData();
-            alert("entry deleted");
+            alert("entry is deleted");
         })
     }
 
