@@ -6,7 +6,7 @@ function Header(){
     return(
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div className="container-fluid">
-                <a className="navbar-brand" href="#">Navbar</a>
+                <a className="navbar-brand" href="#">SMS</a>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span className="navbar-toggler-icon"></span>
                 </button>
@@ -17,6 +17,9 @@ function Header(){
                         </li>
                         <li className="nav-item">
                             <Link to="/add" className="nav-link active">Create Student</Link>
+                        </li>
+                        <li className="nav-item">
+                            <Link to="/add" className="nav-link active">Update Student</Link>
                         </li>
                     </ul>
                 </div>
