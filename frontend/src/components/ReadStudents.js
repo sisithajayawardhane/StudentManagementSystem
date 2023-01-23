@@ -31,7 +31,7 @@ export default function ReadStudents(){
 
     return(
         <div>
-            <Table singleLine >
+            <Table celled>
                 <Table.Header>
                     <Table.Row>
                         <Table.HeaderCell>Student Name</Table.HeaderCell>
@@ -55,17 +55,17 @@ export default function ReadStudents(){
 
                             return(
                                 <Table.Row key={data._id}>
-                                    <Table.Cell >{data.name}</Table.Cell>
-                                    <Table.Cell >{data.age}</Table.Cell>
-                                    <Table.Cell >{data.gender}</Table.Cell>
+                                    <Table.Cell>{data.name}</Table.Cell>
+                                    <Table.Cell>{data.age}</Table.Cell>
+                                    <Table.Cell>{data.gender}</Table.Cell>
                                     <Link to="/update">
                                         <Table.Cell>
                                             <Button inverted color='blue' onClick={() => setData(data)}>Update</Button>
                                         </Table.Cell>
                                     </Link>
                                     <Table.Cell>
-                                            <Button inverted color='red' onClick={() => onDelete(data._id)}>Delete</Button>
-                                        </Table.Cell>
+                                        <Button inverted color='red' onClick={() => onDelete(data._id)}>Delete</Button>
+                                    </Table.Cell>
                                     
                                 </Table.Row>
                                 

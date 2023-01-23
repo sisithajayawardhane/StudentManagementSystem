@@ -26,7 +26,7 @@ export default function AddStudent(){
             <form onSubmit={sendData}>
                 <div className="mb-3">
                     <label for="name" className="form-label">Student Name</label>
-                    <input type="text" className="form-control" id="name" placeholder="Enter Student Name"
+                    <input type="text" className="form-control" id="name" placeholder="John Doe"
                     onChange={(e)=>{
                         setName(e.target.value);
                     }}
@@ -35,7 +35,7 @@ export default function AddStudent(){
 
                 <div className="mb-3">
                     <label for="age" className="form-label">Student Age</label>
-                    <input type="text" className="form-control" id="age" placeholder="Enter Student Age"
+                    <input type="text" className="form-control" id="age" placeholder="25"
                     onChange={(e)=>{
                         setAge(e.target.value);
                     }}
@@ -44,7 +44,7 @@ export default function AddStudent(){
 
                 <div className="mb-3">
                     <label for="gender" className="form-label">Student Gender</label>
-                    <input type="text" className="form-control" id="gender" placeholder="Enter Student Gender"
+                    <input type="text" className="form-control" id="gender" placeholder="Male"
                     onChange={(e)=>{
                         setGender(e.target.value);
                     }}
