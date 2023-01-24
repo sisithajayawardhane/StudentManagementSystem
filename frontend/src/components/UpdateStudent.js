@@ -2,8 +2,10 @@ import React, {useState, useEffect} from "react";
 import axios from "axios";
 import {Button, Form} from "semantic-ui-react";
 
+
 export default function UpdateStudent(){
     
+    const BASE_URL = "https://smmmms.onrender.com/student";
     const [name, setName] = useState('');
     const [age, setAge] = useState('');
     const [gender, setGender] = useState('');
@@ -18,7 +20,7 @@ export default function UpdateStudent(){
     }, []);
 
     const updatedStudentData = ()=>{
-        axios.put(`http://localhost:8070/student/update/${_id}`,{
+        axios.put(`${BASE_URL}/update/${_id}`,{
             name,
             age,
             gender

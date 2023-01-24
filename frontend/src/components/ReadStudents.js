@@ -5,9 +5,10 @@ import {Link} from "react-router-dom";
 
 export default function ReadStudents(){
 
+    const BASE_URL = "https://smmmms.onrender.com/student";
     const [students, setStudents] = useState([]);
     useEffect(()=>{
-        axios.get("http://localhost:8070/student/").then((response)=>{
+        axios.get(BASE_URL).then((response)=>{
             setStudents(response.data);
         }).catch((err)=>{
             alert(err.message);
@@ -15,7 +16,7 @@ export default function ReadStudents(){
     }, [])
 
     const getLatestData= ()=>{
-        axios.get("http://localhost:8070/student/").then((response)=>{
+        axios.get(BASE_URL).then((response)=>{
             setStudents(response.data);
         }).catch((err)=>{
             alert(err.message);
@@ -23,7 +24,7 @@ export default function ReadStudents(){
     }
 
     const onDelete = (id)=>{
-        axios.delete(`http://localhost:8070/student/delete/${id}`).then(()=>{
+        axios.delete(`${BASE_URL}/delete/${id}`).then(()=>{
             getLatestData();
             alert("entry is deleted");
         })

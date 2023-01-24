@@ -2,7 +2,7 @@ import React, {useState} from "react";
 import axios from "axios";
 
 export default function AddStudent(){
-
+    const BASE_URL = "https://smmmms.onrender.com/student";
     const [name, setName] = useState("");
     const [age, setAge] = useState("");
     const [gender, setGender] = useState("");
@@ -14,7 +14,7 @@ export default function AddStudent(){
             age,
             gender
         }
-        axios.post("http://localhost:8070/student/add", newStudent).then(()=>{
+        axios.post(`${BASE_URL}/add`, newStudent).then(()=>{
             alert("Student Added");
         }).catch((err)=>{
             alert(err);
