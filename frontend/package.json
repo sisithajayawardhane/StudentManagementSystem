@@ -1,5 +1,4 @@
 {
-  "homepage": "http://sisithajayawardhane.github.io/StudentManagementSystem",
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
@@ -20,9 +19,7 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d build",
-    "start": "concurrently \"react-scripts start\" \"cd ../backend && npm run dev\"",
+    "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
